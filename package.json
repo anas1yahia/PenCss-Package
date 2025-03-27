@@ -25,16 +25,16 @@
     "responsive",
     "ui"
   ],
-  "author": "Your Name or Organization",
+  "author": "yahia anis",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/pencss.git"
+    "url": "https://github.com/anas1yahia/PenCss-Package.git"
   },
   "bugs": {
-    "url": "https://github.com/your-username/pencss/issues"
+    "url": "https://github.com/anas1yahia/PenCss-Package/issues"
   },
-  "homepage": "https://github.com/your-username/pencss#readme",
+  "homepage": "https://github.com/anas1yahia/PenCss-Package/blob/main/README.md",
   "contributes": {
     "html.customData": [
       "./custom/attr-custom-data.json"
