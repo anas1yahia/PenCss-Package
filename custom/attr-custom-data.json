@@ -1,0 +1,20 @@
+{
+    "version": 1.1,
+    "tags": [],
+    "globalAttributes": [
+      {
+        "name": "as",
+        "description": "Custom attribute for PenCss typography system.",
+        "values": [
+          { "name": "h1-text", "description": "Applies styles for H1 typography" },
+          { "name": "h2-text", "description": "Applies styles for H2 typography" },
+          { "name": "h3-text", "description": "Applies styles for H3 typography" },
+          { "name": "body-text", "description": "Applies styles for body text" },
+          { "name": "caption-text", "description": "Applies styles for captions" },
+          { "name": "button-text", "description": "Applies styles for buttons" },
+          { "name": "label-text", "description": "Applies styles for form labels" },
+          { "name": "link-text", "description": "Applies styles for links" }
+        ]
+      }
+    ]
+  }
