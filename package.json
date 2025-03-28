@@ -1,6 +1,6 @@
 {
   "name": "@anas14/pencss",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "PenCss - A responsive typography system",
   "main": "dist/typography.min.js",
   "module": "dist/typography.js",
