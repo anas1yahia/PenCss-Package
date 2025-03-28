@@ -1,5 +1,5 @@
 {
-  "name": "pencss",
+  "name": "@anas14/pencss",
   "version": "1.0.0",
   "description": "PenCss - A responsive typography system",
   "main": "dist/typography.min.js",
@@ -25,20 +25,23 @@
     "responsive",
     "ui"
   ],
-  "author": "yahia anis",
-  "license": "ISC",
+  "author": "anas14",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/anas1yahia/PenCss-Package.git"
+    "url": "git+https://github.com/anas1yahia/PenCss-Package.git"
   },
   "bugs": {
     "url": "https://github.com/anas1yahia/PenCss-Package/issues"
   },
-  "homepage": "https://github.com/anas1yahia/PenCss-Package/blob/main/README.md",
-  "contributes": {
-    "html.customData": [
-      "./custom/attr-custom-data.json"
-    ]
+  "homepage": "https://github.com/anas1yahia/PenCss-Package",
+  "exports": {
+    ".": {
+      "require": "./dist/typography.min.js",
+      "module": "./dist/typography.js",
+      "browser": "./dist/typography.umd.js"
+    },
+    "./typography.css": "./dist/typography.min.css"
   },
   "devDependencies": {
     "@types/node": "^22.13.14",
@@ -53,7 +56,6 @@
   },
   "browser": "dist/typography.umd.js",
   "types": "dist/types/typography.d.ts",
-  "dependencies": {
-    "pencss": "file:pencss-1.0.0.tgz"
-  }
+  "type": "module",
+  "dependencies": {}
 }
