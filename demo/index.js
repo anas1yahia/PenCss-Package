@@ -1,7 +1,10 @@
-import { initTypography } from "../src/js/typography.js";
+// main.js or your entry file
+import { initTypography } from 'pencss';
+import 'pencss/css';
+// Initialize the typography system
 
 initTypography({
-    baseFontSize: "17px",
+    baseFontSize: "10px",
     fontFamily: "'Roboto', sans-serif"
 });
 
@@ -16,3 +19,4 @@ function applyTypographyRoles() {
 document.addEventListener("DOMContentLoaded", applyTypographyRoles);
 console.log("Typography system initialized with:", settings);
 console.log("Typography.js loaded successfully.");
+ 
