@@ -1,2 +1,5 @@
-import "./css/typography.css"; // Auto-load CSS
-export { initTypography } from "./js/typography.js"; // Export main function
+import { initTypography } from "./js/typography.js";
+// Export all public-facing utilities here
+export { initTypography };
+// Optional: auto-initialize on import
+initTypography();

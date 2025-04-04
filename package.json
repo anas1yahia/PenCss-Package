@@ -1,18 +1,23 @@
 {
   "name": "pencss",
-  "version": "1.0.6",
-  "description": "PenCss - A responsive typography system",
+  "version": "1.0.7",
+  "description": "PenCss - A responsive, logic-based typography system",
   "main": "dist/pencss.min.js",
   "module": "dist/pencss.js",
+  "types": "dist/types/pencss.d.ts",
   "style": "dist/pencss.min.css",
+  "browser": "dist/pencss.umd.js",
+  "exports": {
+    "import": "./dist/pencss.js",
+    "require": "./dist/pencss.min.js",
+    "browser": "./dist/pencss.umd.js",
+    "./css": "./dist/pencss.min.css"
+  },
   "files": [
     "dist",
     "README.md",
     "LICENSE"
   ],
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "build": "npm run prebuild && npm run build:css && npm run build:js",
     "prebuild": "mkdir -p dist",
@@ -25,7 +30,9 @@
     "css",
     "typography",
     "responsive",
-    "ui"
+    "logic-based",
+    "ui",
+    "framework"
   ],
   "author": "anas14",
   "license": "MIT",
@@ -37,12 +44,6 @@
     "url": "https://github.com/anas1yahia/PenCss-Package/issues"
   },
   "homepage": "https://github.com/anas1yahia/PenCss-Package",
-  "exports": {
-    "import": "pencss/dist/pencss.js",
-    "require": "pencss/dist/pencss.min.js",
-    "browser": "pencss/dist/pencss.umd.js",
-    "./css": "pencss/dist/pencss.min.css"
-  },
   "devDependencies": {
     "@types/node": "^22.13.14",
     "autoprefixer": "^10.4.21",
@@ -54,7 +55,5 @@
   "peerDependencies": {
     "postcss": "^8.4.0"
   },
-  "browser": "dist/pencss.umd.js",
-  "types": "dist/types/pencss.d.ts",
   "type": "module"
 }

@@ -1,2 +1,2 @@
-import "./css/typography.css";
-export { initTypography } from "./js/typography.js";
+import { initTypography } from "./js/typography.js";
+export { initTypography };
