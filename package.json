@@ -1,6 +1,6 @@
 {
   "name": "pencss",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "PenCss - A responsive, logic-based typography system",
   "main": "dist/pencss.min.js",
   "module": "dist/pencss.js",
