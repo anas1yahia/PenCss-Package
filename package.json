@@ -1,10 +1,10 @@
 {
-  "name": "@anas14/pencss",
-  "version": "1.0.3",
+  "name": "pencss",
+  "version": "1.0.6",
   "description": "PenCss - A responsive typography system",
-  "main": "dist/typography.min.js",
-  "module": "dist/typography.js",
-  "style": "dist/typography.min.css",
+  "main": "dist/pencss.min.js",
+  "module": "dist/pencss.js",
+  "style": "dist/pencss.min.css",
   "files": [
     "dist",
     "README.md",
@@ -14,10 +14,12 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "npm run build:css && npm run build:js",
-    "build:css": "postcss src/css/typography.css --use autoprefixer cssnano -o dist/typography.min.css",
-    "build:js": "tsc && terser dist/typography.js -o dist/typography.min.js --compress --mangle",
-    "prepublishOnly": "npm run build"
+    "build": "npm run prebuild && npm run build:css && npm run build:js",
+    "prebuild": "mkdir -p dist",
+    "build:css": "if [ -f src/css/typography.css ]; then postcss src/css/typography.css --use autoprefixer cssnano -o dist/pencss.min.css; else echo 'Error: src/css/typography.css does not exist.'; exit 1; fi",
+    "build:js": "tsc && terser dist/index.js -o dist/pencss.min.js --compress --mangle",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
   },
   "keywords": [
     "css",
@@ -36,26 +38,23 @@
   },
   "homepage": "https://github.com/anas1yahia/PenCss-Package",
   "exports": {
-    ".": {
-      "require": "./dist/typography.min.js",
-      "module": "./dist/typography.js",
-      "browser": "./dist/typography.umd.js"
-    },
-    "./typography.css": "./dist/typography.min.css"
+    "import": "pencss/dist/pencss.js",
+    "require": "pencss/dist/pencss.min.js",
+    "browser": "pencss/dist/pencss.umd.js",
+    "./css": "pencss/dist/pencss.min.css"
   },
   "devDependencies": {
     "@types/node": "^22.13.14",
     "autoprefixer": "^10.4.21",
     "cssnano": "^7.0.6",
     "postcss-cli": "^11.0.1",
-    "terser": "^5.39.0",
-    "typescript": "^5.8.2"
+    "terser": "^5.15.0",
+    "typescript": "^5.9.0"
   },
   "peerDependencies": {
     "postcss": "^8.4.0"
   },
-  "browser": "dist/typography.umd.js",
-  "types": "dist/types/typography.d.ts",
-  "type": "module",
-  "dependencies": {}
+  "browser": "dist/pencss.umd.js",
+  "types": "dist/types/pencss.d.ts",
+  "type": "module"
 }

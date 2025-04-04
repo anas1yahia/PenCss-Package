@@ -14,41 +14,33 @@ You can install PenCss via NPM or CDN.
 ### 1️⃣ Install via NPM
 Install PenCss in your project:
 ```sh
-npm install @anas14/pencss
+npm install pencss
 ```
-**For CSS Import:**
-To include the CSS when using NPM, use the following import statement:
+**For CSS Import (via bundlers):**
 ```css
-@import url("../node_modules/@anas14/pencss/dist/typography.css"); /* Ensure the correct path based on your project structure */
+@import "pencss/dist/pencss.min.css"; /* Ensure correct path based on your project structure */
 ```
-or in SCSS:
+
+**For SCSS Import (via bundlers):**
 ```scss
-@import "@anas14/pencss/dist/typography";
+@import "pencss/dist/pencss.min"; /* Ensure correct path based on your project structure */
 ```
 
 **For JavaScript Import (ES Module):**
 ```js
-import { initTypography } from "./node_modules/@anas14/pencss/dist/typography.js"; /* Ensure correct import path */
-initTypography({
-    baseFontSize: "16px",
-    fontFamily: "'Inter', sans-serif"
-});
+import "pencss"; /* Ensure correct import path */
 ```
 
 **For JavaScript Import (CommonJS - Node.js projects):**
 ```js
-const { initTypography } = require("@anas14/pencss");
-initTypography({
-    baseFontSize: "16px",
-    fontFamily: "'Inter', sans-serif"
-});
+const pencss = require("pencss"); /* Ensure correct import path */
 ```
 
 ### 2️⃣ Use via CDN
 If you don't want to install via NPM, use the CDN:
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@anas14/pencss/dist/typography.min.css">
-<script src="https://cdn.jsdelivr.net/npm/@anas14/pencss/dist/typography.min.js" defer></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pencss/dist/typography.min.css">
+<script src="https://cdn.jsdelivr.net/npm/pencss/dist/typography.min.js" defer></script>
 ```
 **Usage:**
 ```js
@@ -66,7 +58,7 @@ initTypography({
 
 ### 🔍 Troubleshooting
 - Ensure you have run `npm install` if using the package.
-- Verify that the correct import path is used (`@anas14/pencss` for JS and `@anas14/pencss/dist/typography.css` for CSS).
+- Verify that the correct import path is used (`pencss` for JS and `pencss/dist/typography.css` for CSS).
 - If using a module bundler (e.g., Webpack, Vite), make sure it resolves package imports correctly.
 
 ## ✨ Usage
